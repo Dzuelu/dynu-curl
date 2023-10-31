@@ -7,7 +7,7 @@ RUN apk --no-cache add curl
 ADD cronjob.sh /root/cronjob.sh
 
 # Give execution rights on the cron scripts
-RUN chmod 0644 /root/cronjob.sh
+RUN chmod 555 /root/cronjob.sh
 
 # Set up the cron job
 RUN echo '* * * * * /root/cronjob.sh' > /etc/crontabs/root
