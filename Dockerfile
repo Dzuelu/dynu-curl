@@ -13,4 +13,4 @@ RUN chmod 555 /root/cronjob.sh
 RUN echo '*/10 * * * * /root/cronjob.sh' > /etc/crontabs/root
 
 # start crond with log level in foreground, output to stderr
-CMD ["crond", "-f", "-d", "4"]
+CMD ["crond", "-f", "-d", "8"]
