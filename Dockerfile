@@ -12,7 +12,7 @@ RUN touch /var/log/cron.log
 
 #Install Cron
 RUN apt-get update
-RUN apt-get -y install cron
+RUN apt-get -y install cron curl
 
 # Run the command on container startup
 CMD cron && tail -f /var/log/cron.log
