@@ -1,7 +1,0 @@
-run_cron_job(){
-  echo "Hello!"
-  curl --no-progress-meter -u "$USER:$PASS" "https://api.dynu.com/nic/update\?hostname=$HOSTNAME"
-}
-
-* * * * * run_cron_job
-# Don't remove the empty line at the end of this file. It is required to run the cron job
