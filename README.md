@@ -10,6 +10,7 @@ version: '3'
 services:
   dynu:
     build: https://github.com/Dzuelu/dynu-curl.git
+    network_mode: 'host'
     environment:
       - USER=dynu_username
       - PASS=dynu_password
