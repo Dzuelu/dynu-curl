@@ -10,7 +10,7 @@ ADD cronjob.sh /root/cronjob.sh
 RUN chmod 555 /root/cronjob.sh
 
 # Set up the cron job
-RUN echo '* * * * * /root/cronjob.sh' > /etc/crontabs/root
+RUN echo '*/10 * * * * /root/cronjob.sh' > /etc/crontabs/root
 
-# start crond with log level 8 in foreground, output to stderr
-CMD ["crond", "-f", "-d", "8"]
+# start crond with log level in foreground, output to stderr
+CMD ["crond", "-f", "-d", "4"]
